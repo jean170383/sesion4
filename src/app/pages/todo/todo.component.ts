@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, LOCALE_ID, Output } from '@angular/core';
+import { Component, EventEmitter, Input, LOCALE_ID, Output, ViewEncapsulation } from '@angular/core';
 import { NTodo } from '../../models/todo.model';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import spanish from '@angular/common/locales/es';
@@ -16,7 +16,8 @@ registerLocaleData(spanish);
     }
   ],
   templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss'
+  styleUrl: './todo.component.scss',
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class TodoComponent {
   @Input({ required: true}) todoData!: NTodo.TodoData;
@@ -27,17 +28,17 @@ export class TodoComponent {
   get priority(): string {
     switch (this.todoData.priority) {
       case NTodo.Priority.LOW:
-        
+
         return NTodo.PriorityText.LOW;
-    
+
       case NTodo.Priority.MEDIUM:
-        
+
         return NTodo.PriorityText.MEDIUM;
-    
+
       default:
         return NTodo.PriorityText.HIGH;
     }
-    
+
   }
 
   get progress() {
@@ -53,5 +54,5 @@ export class TodoComponent {
 
     return NTodo.RangeText.HIGH;
   }
-  
+
 }

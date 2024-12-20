@@ -22,12 +22,12 @@ export namespace NTodo {
         color:       TodoConfig;
         class:       TodoConfig;
     }
-    
+
     export interface TodoConfig {
         status:   string;
         priority: string;
     }
-    
+
     export enum Priority {
         HIGH = 1,
         MEDIUM = 2,

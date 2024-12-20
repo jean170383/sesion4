@@ -5,10 +5,9 @@
     border-radius: 1rem;
     height: 100%;
     position: relative;
-    
 
     .card-body {
-        margin-top: 1rem;  
+        margin-top: 1rem;
     }
 
     .card-content {
@@ -59,7 +58,7 @@
 
             &.status {
                 background-color: #d2c8c8;
-                
+
                 &.to-do {
                     background-color: #ed4040;
                 }
@@ -67,9 +66,9 @@
                 &.in-progress {
                     background-color: #76761c;
                 }
-                
+
                 &.done {
-                    background-color: #68db68; 
+                    background-color: #68db68;
                 }
 
                 &.backlog {
@@ -109,7 +108,7 @@
             padding: 0.125rem 0.5rem;
             font-weight: bolder;
             color: #ffffff;
-            
+
             &::after {
                 content: "";
                 position: absolute;
@@ -139,12 +138,22 @@
                     background-color: #ffd700;
                 }
             }
-            
+
             &[data-progress-range="high"] {
                 .progressbar__fill {
                     background-color: #32cd32;
                 }
             }
-          }          
+          }
     }
 }
+
+// :host{
+//   color:green;
+// }
+// :host-context(.orange-color){
+//   color:orange;
+// }
+// header{
+//   color:#32cd32;
+// }
